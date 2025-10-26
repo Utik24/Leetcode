@@ -31,10 +31,10 @@ public class InsertGreatestCommonDivisorsInLinkedList {
             if (head.next == null) return head;
             ListNode listNode1 = head;
             ListNode listNode2 = head.next;
-            while (listNode2.next != null){
+            while (listNode2.next != null) {
                 listNode1.next = new ListNode(gcd(listNode1.val, listNode2.val), listNode2);
-                listNode1=listNode2;
-                listNode2=listNode2.next;
+                listNode1 = listNode2;
+                listNode2 = listNode2.next;
             }
             return head;
         }
